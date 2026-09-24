@@ -960,7 +960,12 @@ window.ElectricityApp={canvasImage,buildSummary,flushDraft:async()=>{clearTimeou
   if(!configured())throw new Error("管理者登入服務尚未設定。");
   const response=await fetch(SUPABASE_URL+"/functions/v1/manager-login",{method:"POST",headers:{apikey:SUPABASE_PUBLISHABLE_KEY,"Content-Type":"application/json"},body:JSON.stringify({pin})});
   const result=await response.json().catch(()=>({}));
-  if(!response.ok)throw new Error(response.status===429?"嘗試次數過多，請 30 分鐘後再試。":response.status===401?"密碼不正確，請重新輸入。":"登入服務暫時無法使用，請稍後再試。");
+  if(!response.ok){
+   if(result.error==="login_not_configured")throw new Error("管理者登入尚未完成設定。請由管理者在 Supabase「Edge Functions → Secrets」新增 MANAGER_PIN（四位數），儲存後再試。請勿將密碼傳給他人。");
+   if(response.status===429)throw new Error("嘗試次數過多，請 30 分鐘後再試。");
+   if(response.status===401)throw new Error("密碼不正確，請重新輸入。");
+   throw new Error("登入服務暫時無法使用，請稍後再試。");
+  }
   session=result;await enterManager();
  }
  async function lock(message=""){
