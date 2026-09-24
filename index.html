@@ -51,8 +51,12 @@ dialog{border:1px solid var(--line);border-radius:20px;padding:0;width:min(960px
 @media(max-width:760px){.mobile-brand{display:block;flex-shrink:0}.mobile-brand img{width:101px;height:auto;display:block}.breadcrumb{display:none}.lock-btn{display:inline-flex!important;font-size:11px;min-height:32px}.top-actions{gap:10px}.topbar{padding:0 17px}.storage-pill{font-size:8px}.login-screen{padding:23px 23px 19px}.login-header img{width:143px}.login-header>span{font-size:8px;letter-spacing:1px}.login-layout{display:flex;flex-direction:column;padding:31px 0 29px;gap:25px;align-items:stretch}.login-story{text-align:center}.login-story .eyebrow{font-size:8px;margin-bottom:12px}.login-story h1{font-size:30px;letter-spacing:-.6px;line-height:1.4}.login-story>p{font-size:12px;line-height:1.8;margin-top:13px}.login-rooms,.login-features{display:none}.login-card{padding:25px;margin:0 auto;max-width:440px;border-radius:17px}.login-lock{display:none}.login-card h2{font-size:23px}.login-card .eyebrow{font-size:8px}.login-card>p{font-size:11px}.login-card form{margin-top:23px}.lock-notice{margin-top:23px;padding-top:17px}.lock-notice p{font-size:10px}.login-footer{font-size:9px;padding-top:14px}.login-footer>span:last-child{display:none}.fields-grid input,.meter-row input,select,textarea{font-size:16px!important}.meter-header{display:none}.meter-row.readings-cols,.meter-row.usage-cols{display:grid;grid-template-columns:1fr 1fr;gap:12px;padding:18px 0}.meter-row>.room-name{grid-column:1;grid-row:1}.meter-row>.meter-output{grid-column:2;grid-row:1}.meter-row .room-name strong{font-size:13px;max-width:150px}.meter-row.readings-cols>div:nth-child(2):before{content:"上期讀值";display:block;font-size:10px;margin-bottom:5px;color:#758d99}.meter-row.readings-cols>div:nth-child(3):before{content:"本期讀值";display:block;font-size:10px;margin-bottom:5px;color:#758d99}.meter-row.usage-cols>div:nth-child(2){grid-column:1/-1}.meter-row.usage-cols>div:nth-child(2):before{content:"本期用電度數";display:block;font-size:10px;margin-bottom:5px}.meter-row input{padding:10px;text-align:left}.room-icon{display:grid}.meter-output{font-size:19px}.data-wrap{overflow:visible}.data-table,.data-table tbody{display:block}.data-table thead{display:none}.data-table tr{display:block;background:#f9fbfc;border:1px solid #e0e8ed;border-radius:12px;padding:10px 13px;margin:12px 0}.data-table td{display:flex;text-align:right!important;justify-content:space-between;gap:15px;white-space:normal;font-size:12px;padding:9px 0;flex-wrap:wrap}.data-table td:before{content:attr(data-label);font-size:10px;color:#8498a3;text-align:left;margin-right:auto}.data-table td small{display:block;width:100%}.data-table td:last-child{border-bottom:0}.data-table td:empty{display:none}.detail-top h2{font-size:14px}.settings-grid .two-buttons{flex-wrap:wrap}}
 @media(max-width:380px){.login-screen{padding:20px 18px 17px}.login-card{padding:22px}.login-story h1{font-size:27px}.login-layout{padding:23px 0;gap:20px}.storage-pill{display:none}.login-header>span{font-size:7px}.topbar{padding:0 13px}}
 
-#publicRoot .brand{display:block;color:var(--green-deep);font-size:28px;line-height:1.1;letter-spacing:1px}
-#publicRoot .brand small{margin-top:7px;letter-spacing:1.2px}
+#publicRoot .brand{display:flex;flex-direction:column;align-items:flex-start;gap:7px;color:var(--green-deep);font-size:28px;line-height:1.1;letter-spacing:1px}
+#publicRoot .public-brand-logo{display:block;width:138px;height:auto;max-width:100%}
+#publicRoot .brand small{margin-top:0;letter-spacing:1.2px}
+#publicRoot .breadcrumb{display:flex;align-items:center;gap:12px}
+#publicRoot .breadcrumb span{margin:0}
+#publicRoot .public-topbar-logo{display:block;width:82px;height:auto;max-width:100%;flex:none}
 #publicRoot .property-icon{font-size:20px;width:35px;height:35px;display:grid;place-items:center}
 #publicRoot .nav-item>span{font-size:18px;width:18px;text-align:center}
 #publicRoot .sidebar-note>span{color:#7f9caa;font-size:25px;display:block;margin-bottom:12px}
@@ -61,7 +65,7 @@ dialog{border:1px solid var(--line);border-radius:20px;padding:0;width:min(960px
 .admin-login-overlay:not([hidden]){position:fixed;inset:0;z-index:100;background:var(--bg);overflow:auto}
 .admin-login-overlay #cancelLoginBtn{margin-top:18px}
 .admin-login-overlay .lock-notice{margin-top:20px}
-@media(max-width:760px){#publicRoot .sidebar .brand,#publicRoot .sidebar .property,#publicRoot .sidebar .nav-label,#publicRoot .sidebar-note,#publicRoot .version{display:none}#publicRoot .sidebar nav{justify-content:space-around}#publicRoot .nav-item{width:50%}#publicRoot .topbar{padding:0 12px}#publicRoot .top-actions{gap:7px;margin-left:auto}#publicRoot .storage-pill{display:none}#publicRoot #adminOpenBtn{font-size:10px;min-height:34px;padding:6px 9px}}
+@media(max-width:760px){#publicRoot .sidebar .brand,#publicRoot .sidebar .property,#publicRoot .sidebar .nav-label,#publicRoot .sidebar-note,#publicRoot .version{display:none}#publicRoot .sidebar nav{justify-content:space-around}#publicRoot .nav-item{width:50%}#publicRoot .topbar{padding:0 12px}#publicRoot .top-actions{gap:7px;margin-left:auto}#publicRoot .storage-pill{display:none}#publicRoot #adminOpenBtn{font-size:10px;min-height:34px;padding:6px 9px}#publicRoot .public-topbar-logo{width:84px}}
 
 </style>
 </head>
@@ -69,7 +73,7 @@ dialog{border:1px solid var(--line);border-radius:20px;padding:0;width:min(960px
 
 <div id="publicRoot">
  <aside class="sidebar">
-  <a href="#history" class="brand"><strong>PRStK</strong><small>SHARED HOME. CLEAR BILLS.</small></a>
+  <a href="#history" class="brand"><img class="public-brand-logo" alt="PRStK" width="647" height="158"><small>SHARED HOME. CLEAR BILLS.</small></a>
   <div class="property"><span class="property-icon" aria-hidden="true">⌂</span><div><strong>公開閱覽</strong><small>正式結算 · 唯讀</small></div><span class="tiny-dot"></span></div>
   <p class="nav-label">公開資料</p>
   <nav aria-label="公開資料導覽">
@@ -80,7 +84,7 @@ dialog{border:1px solid var(--line);border-radius:20px;padding:0;width:min(960px
   <p class="version">PRStK · PUBLIC VIEW</p>
  </aside>
  <div class="app-shell">
-  <header class="topbar"><div class="breadcrumb">PRStK<span>·</span><strong id="publicBreadcrumb">歷史帳單</strong></div><div class="top-actions"><span class="storage-pill"><i></i><span id="publicStatus">正在載入</span></span><button id="adminOpenBtn" class="btn secondary">管理者登入</button></div></header>
+  <header class="topbar"><div class="breadcrumb"><img class="public-topbar-logo" alt="PRStK" width="647" height="158"><span>·</span><strong id="publicBreadcrumb">歷史帳單</strong></div><div class="top-actions"><span class="storage-pill"><i></i><span id="publicStatus">正在載入</span></span><button id="adminOpenBtn" class="btn secondary">管理者登入</button></div></header>
   <main id="publicMain" tabindex="-1">
    <section id="public-page-history" class="page">
     <div class="page-heading"><div><div class="eyebrow">BILLING ARCHIVE</div><h1>歷史帳單<span class="heading-dot">.</span></h1><p>四房正式結算紀錄；草稿與管理資料不會公開。</p></div></div>
@@ -978,7 +982,7 @@ window.ElectricityApp={canvasImage,buildSummary,flushDraft:async()=>{clearTimeou
  document.addEventListener("visibilitychange",()=>{if(document.visibilityState==="visible"&&manager&&Date.now()-lastActivity>=TIMEOUT)lock("閒置超過 10 分鐘，已自動登出。");});
  window.addEventListener("pagehide",()=>{if(manager)window.ElectricityApp?.flushDraft();});
  window.addEventListener("pageshow",e=>{if(e.persisted&&manager)lock();});
- showPublicPage(location.hash==="#analytics"?"analytics":"history");refreshPublic();
+ const sourceLogo=document.querySelector(".login-header img[alt='PRStK']");if(sourceLogo)document.querySelectorAll("#publicRoot .public-brand-logo,#publicRoot .public-topbar-logo").forEach(image=>{image.src=sourceLogo.src;});showPublicPage(location.hash==="#analytics"?"analytics":"history");refreshPublic();
 })();
 </script>
 </body></html>
