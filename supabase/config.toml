@@ -1,0 +1,3 @@
+[functions.manager-login]
+verify_jwt = false
+
